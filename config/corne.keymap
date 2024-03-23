@@ -9,57 +9,107 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-    combos {
-        compatible = "zmk,combos";
+    combos { compatible = "zmk,combos"; };
 
-        workspace-1 {
-            bindings = <&kp LG(N1)>;
-            key-positions = <36 1>;
+    behaviors {
+        workspace_1: workspace_1 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "WORKSPACE_1";
+            bindings = <&kp Q>, <&kp N1>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI)>;
+            keep-mods = <(MOD_LGUI)>;
         };
 
-        workspace-2 {
-            bindings = <&kp LG(N2)>;
-            key-positions = <36 2>;
+        workspace_2: workspace_2 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "WORKSPACE_2";
+            bindings = <&kp W>, <&kp N2>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI)>;
+            keep-mods = <(MOD_LGUI)>;
         };
 
-        workspace-3 {
-            bindings = <&kp LG(N3)>;
-            key-positions = <36 3>;
+        workspace_3: workspace_3 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "WORKSPACE_3";
+            bindings = <&kp E>, <&kp N3>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI)>;
+            keep-mods = <(MOD_LGUI)>;
         };
 
-        workspace-4 {
-            bindings = <&kp LG(N4)>;
-            key-positions = <36 4>;
+        workspace_4: workspace_4 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "WORKSPACE_4";
+            bindings = <&kp R>, <&kp N4>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI)>;
+            keep-mods = <(MOD_LGUI)>;
         };
 
-        workspace-5 {
-            bindings = <&kp LG(N5)>;
-            key-positions = <36 5>;
+        workspace_5: workspace_5 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "WORKSPACE_5";
+            bindings = <&kp T>, <&kp N5>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI)>;
+            keep-mods = <(MOD_LGUI)>;
         };
 
-        workspace-6 {
-            bindings = <&kp LG(N6)>;
-            key-positions = <36 6>;
+        workspace_6: workspace_6 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "WORKSPACE_6";
+            bindings = <&kp Y>, <&kp N6>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI)>;
+            keep-mods = <(MOD_LGUI)>;
         };
 
-        workspace-7 {
-            bindings = <&kp LG(N7)>;
-            key-positions = <36 7>;
+        workspace_7: workspace_7 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "WORKSPACE_7";
+            bindings = <&kp U>, <&kp N7>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI)>;
+            keep-mods = <(MOD_LGUI)>;
         };
 
-        workspace-8 {
-            bindings = <&kp LG(N8)>;
-            key-positions = <36 8>;
+        workspace_8: workspace_8 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "WORKSPACE_8";
+            bindings = <&kp I>, <&kp N8>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI)>;
+            keep-mods = <(MOD_LGUI)>;
         };
 
-        workspace-9 {
-            bindings = <&kp LG(N9)>;
-            key-positions = <36 9>;
+        workspace_9: workspace_9 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "WORKSPACE_9";
+            bindings = <&kp O>, <&kp N9>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI)>;
+            keep-mods = <(MOD_LGUI)>;
         };
 
-        workspace-0 {
-            bindings = <&kp LG(N0)>;
-            key-positions = <36 10>;
+        workspace_0: workspace_0 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "WORKSPACE_0";
+            bindings = <&kp P>, <&kp N0>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI)>;
+            keep-mods = <(MOD_LGUI)>;
         };
     };
 
