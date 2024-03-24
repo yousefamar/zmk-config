@@ -120,6 +120,16 @@
             #binding-cells = <2>;
             tapping-term-ms = <100>;
         };
+
+        quit: quit {
+            compatible = "zmk,behavior-mod-morph";
+            label = "QUIT";
+            bindings = <&esc_ctrl LCTRL ESC>, <&kp Q>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI)>;
+            keep-mods = <(MOD_LGUI)>;
+        };
     };
 
     keymap {
@@ -133,10 +143,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&esc_ctrl LCTRL ESC  &workspace_1  &workspace_2  &workspace_3  &workspace_4  &workspace_5    &workspace_6  &workspace_7  &workspace_8  &workspace_9  &workspace_0  &kp BSPC
-&kp TAB              &kp A         &kp S         &kp D         &kp F         &kp G           &kp H         &kp J         &kp K         &kp L         &kp SEMI      &kp SQT
-&kp LEFT_ALT         &kp Z         &kp X         &kp C         &kp V         &kp B           &kp N         &kp M         &kp COMMA     &kp DOT       &kp FSLH      &kp RSHFT
-                                                 &kp LGUI      &mo 1         &kp SPACE       &kp RET       &mo 2         &kp RALT
+&quit         &workspace_1  &workspace_2  &workspace_3  &workspace_4  &workspace_5    &workspace_6  &workspace_7  &workspace_8  &workspace_9  &workspace_0  &kp BSPC
+&kp TAB       &kp A         &kp S         &kp D         &kp F         &kp G           &kp H         &kp J         &kp K         &kp L         &kp SEMI      &kp SQT
+&kp LEFT_ALT  &kp Z         &kp X         &kp C         &kp V         &kp B           &kp N         &kp M         &kp COMMA     &kp DOT       &kp FSLH      &kp RSHFT
+                                          &kp LGUI      &mo 1         &kp SPACE       &kp RET       &mo 2         &kp RALT
             >;
         };
 
