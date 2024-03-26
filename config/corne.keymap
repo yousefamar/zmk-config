@@ -112,9 +112,9 @@
             keep-mods = <(MOD_LGUI)>;
         };
 
-        esc_ctrl: esc_ctrl {
+        ht_200: ht_200 {
             compatible = "zmk,behavior-hold-tap";
-            label = "ESC_CTRL";
+            label = "HT_200";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -124,7 +124,7 @@
         quit: quit {
             compatible = "zmk,behavior-mod-morph";
             label = "QUIT";
-            bindings = <&esc_ctrl LCTRL ESC>, <&kp Q>;
+            bindings = <&kp ESC>, <&kp Q>;
 
             #binding-cells = <0>;
             mods = <(MOD_LGUI)>;
@@ -143,10 +143,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&quit         &workspace_1  &workspace_2  &workspace_3  &workspace_4  &workspace_5    &workspace_6  &workspace_7  &workspace_8  &workspace_9  &workspace_0  &kp BSPC
-&kp TAB       &kp A         &kp S         &kp D         &kp F         &kp G           &kp H         &kp J         &kp K         &kp L         &kp SEMI      &kp SQT
-&kp LEFT_ALT  &kp Z         &kp X         &kp C         &kp V         &kp B           &kp N         &kp M         &kp COMMA     &kp DOT       &kp FSLH      &kp RSHFT
-                                          &kp LGUI      &mo 1         &kp SPACE       &kp RET       &mo 2         &kp RALT
+&quit              &workspace_1  &workspace_2  &workspace_3  &workspace_4  &workspace_5    &workspace_6  &workspace_7  &workspace_8  &workspace_9  &workspace_0  &kp BSPC
+&ht_200 LCTRL TAB  &kp A         &kp S         &kp D         &kp F         &kp G           &kp H         &kp J         &kp K         &kp L         &kp SEMI      &kp SQT
+&kp LEFT_ALT       &kp Z         &kp X         &kp C         &kp V         &kp B           &kp N         &kp M         &kp COMMA     &kp DOT       &kp FSLH      &kp ENTER
+                                               &kp LGUI      &mo 1         &kp SPACE       &kp RSHIFT    &mo 2         &kp RALT
             >;
         };
 
