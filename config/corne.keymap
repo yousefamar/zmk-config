@@ -9,7 +9,14 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        Ctrl+tab {
+            bindings = <&kp LC(TAB)>;
+            key-positions = <12 0>;
+        };
+    };
 
     behaviors {
         workspace_1: workspace_1 {
