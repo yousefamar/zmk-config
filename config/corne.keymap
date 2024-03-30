@@ -9,14 +9,7 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        Ctrl+tab {
-            bindings = <&kp LC(TAB)>;
-            key-positions = <12 0>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     behaviors {
         workspace_1: workspace_1 {
@@ -137,6 +130,16 @@
             mods = <(MOD_LGUI)>;
             keep-mods = <(MOD_LGUI)>;
         };
+
+        ctrl_tab: ctrl_tab {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CTRL_TAB";
+            bindings = <&quit>, <&kp TAB>;
+
+            #binding-cells = <0>;
+            keep-mods = <(MOD_LCTL)>;
+            mods = <(MOD_LCTL)>;
+        };
     };
 
     keymap {
@@ -150,7 +153,7 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&quit              &workspace_1  &workspace_2  &workspace_3  &workspace_4  &workspace_5    &workspace_6  &workspace_7  &workspace_8  &workspace_9  &workspace_0  &kp BSPC
+&ctrl_tab          &workspace_1  &workspace_2  &workspace_3  &workspace_4  &workspace_5    &workspace_6  &workspace_7  &workspace_8  &workspace_9  &workspace_0  &kp BSPC
 &ht_200 LCTRL TAB  &kp A         &kp S         &kp D         &kp F         &kp G           &kp H         &kp J         &kp K         &kp L         &kp SEMI      &kp SQT
 &kp LEFT_ALT       &kp Z         &kp X         &kp C         &kp V         &kp B           &kp N         &kp M         &kp COMMA     &kp DOT       &kp FSLH      &kp ENTER
                                                &kp LGUI      &mo 1         &kp SPACE       &kp RSHIFT    &mo 2         &kp RALT
