@@ -140,6 +140,15 @@
             keep-mods = <(MOD_LCTL)>;
             mods = <(MOD_LCTL)>;
         };
+
+        backspace_delete: backspace_delete {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BACKSPACE_DELETE";
+            bindings = <&kp BACKSPACE>, <&kp DEL>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI)>;
+        };
     };
 
     keymap {
@@ -153,7 +162,7 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&ctrl_tab          &workspace_1  &workspace_2  &workspace_3  &workspace_4  &workspace_5    &workspace_6  &workspace_7  &workspace_8  &workspace_9  &workspace_0  &kp BSPC
+&ctrl_tab          &workspace_1  &workspace_2  &workspace_3  &workspace_4  &workspace_5    &workspace_6  &workspace_7  &workspace_8  &workspace_9  &workspace_0  &backspace_delete
 &ht_200 LCTRL TAB  &kp A         &kp S         &kp D         &kp F         &kp G           &kp H         &kp J         &kp K         &kp L         &kp SEMI      &kp SQT
 &kp LEFT_ALT       &kp Z         &kp X         &kp C         &kp V         &kp B           &kp N         &kp M         &kp COMMA     &kp DOT       &kp FSLH      &kp ENTER
                                                &kp LGUI      &mo 1         &kp SPACE       &kp RSHIFT    &mo 2         &kp RALT
@@ -168,7 +177,7 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB     &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp N6        &kp N7      &kp N8        &kp N9      &kp N0            &kp DEL
+&kp TAB     &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp N6        &kp N7      &kp N8        &kp N9      &kp N0            &backspace_delete
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LEFT      &kp DOWN    &kp UP        &kp RIGHT   &trans            &trans
 &kp LSHFT   &trans        &trans        &trans        &trans        &trans          &kp C_VOL_DN  &kp C_MUTE  &kp C_VOL_UP  &kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT
                                         &kp LGUI      &trans        &kp SPACE       &kp RET       &trans      &kp RALT
